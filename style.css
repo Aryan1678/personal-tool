@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+
+    background-image: url("./background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+/* Dark layer over background */
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 0;
+}
+
+/* Main section */
+.hero {
+    position: relative;
+    z-index: 1;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* Glass card */
+.glass-box {
+    width: 90%;
+    max-width: 600px;
+
+    padding: 55px 40px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4);
+
+    animation: appear 1s ease;
+}
+
+.small-text {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #eeeeee;
+
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 52px;
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.6);
+}
+
+.description {
+    font-size: 17px;
+    color: #dddddd;
+
+    margin-bottom: 30px;
+}
+
+/* Button */
+button {
+    padding: 14px 35px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: white;
+    color: #111;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.04);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+#message {
+    margin-top: 20px;
+
+    font-size: 15px;
+    color: white;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .glass-box {
+        padding: 40px 25px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+}
