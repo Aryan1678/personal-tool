@@ -14,7 +14,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-V6LCQNCFV2');
     </script>
 </head>
@@ -35,11 +34,41 @@
                 A simple, clean and modern website.
             </p>
 
-            <button id="exploreBtn">
-                Explore
-            </button>
+            <div class="auth-box">
 
-            <p id="message"></p>
+                <h2>Account</h2>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                >
+
+                <button onclick="createAccount()">
+                    Create Account
+                </button>
+
+                <button onclick="login()">
+                    Login
+                </button>
+
+                <button onclick="logout()">
+                    Logout
+                </button>
+
+                <p id="authMessage"></p>
+
+                <p id="userStatus">
+                    Not logged in
+                </p>
+
+            </div>
 
         </div>
 
