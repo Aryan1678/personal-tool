@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Website</title>
+    <title>Personal Tool</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -26,47 +26,50 @@
 
         <div class="glass-box">
 
-            <p class="small-text">WELCOME TO MY WEBSITE</p>
+            <div class="brand">
+                <span>⚔</span>
+                <h1>SAMURAI</h1>
+            </div>
 
-            <h1>Enter Your World</h1>
-
-            <p class="description">
-                A simple, clean and modern website.
-            </p>
+            <p class="tagline">ENTER YOUR WORLD</p>
 
             <div class="auth-box">
 
-                <h2>Account</h2>
+                <h2>Welcome Back</h2>
+                <p class="auth-subtitle">Login or create your account</p>
 
                 <input
                     type="email"
                     id="email"
-                    placeholder="Enter your email"
+                    placeholder="Email address"
+                    autocomplete="email"
                 >
 
                 <input
                     type="password"
                     id="password"
-                    placeholder="Enter your password"
+                    placeholder="Password"
+                    autocomplete="current-password"
                 >
 
-                <button onclick="createAccount()">
-                    Create Account
-                </button>
-
-                <button onclick="login()">
+                <button class="primary-btn" onclick="login()">
                     Login
                 </button>
 
-                <button onclick="logout()">
+                <button class="secondary-btn" onclick="createAccount()">
+                    Create Account
+                </button>
+
+                <button class="logout-btn" onclick="logout()">
                     Logout
                 </button>
 
                 <p id="authMessage"></p>
 
-                <p id="userStatus">
-                    Not logged in
-                </p>
+                <div class="user-status">
+                    <span class="status-dot"></span>
+                    <span id="userStatus">Not logged in</span>
+                </div>
 
             </div>
 
