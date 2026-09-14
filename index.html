@@ -4,80 +4,415 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Personal Tool</title>
+    <title>Dealzy | Smart Deals. Better Choices.</title>
+    <meta name="description" content="Discover useful products and smart deals on Dealzy.">
 
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6LCQNCFV2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-V6LCQNCFV2');
-    </script>
 </head>
 
 <body>
 
-    <div class="overlay"></div>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <span>Deal</span>zy
+        </div>
 
-    <main class="hero">
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+            <button id="searchBtn">Search</button>
+        </div>
 
-        <div class="glass-box">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#deals">Deals</a>
+        </nav>
+    </header>
 
-            <div class="brand">
-                <span>⚔</span>
-                <h1>SAMURAI</h1>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-text">WELCOME TO DEALZY</p>
+
+            <h1>
+                Smart Deals.<br>
+                Better Choices.
+            </h1>
+
+            <p>
+                Discover useful products, gaming gear and everyday essentials
+                in one place.
+            </p>
+
+            <a href="#products" class="hero-btn">
+                Explore Products
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+
+        <h2>Browse Categories</h2>
+
+        <div class="category-container">
+
+            <button class="category-btn" data-category="all">
+                All
+            </button>
+
+            <button class="category-btn" data-category="gaming">
+                Gaming
+            </button>
+
+            <button class="category-btn" data-category="audio">
+                Audio
+            </button>
+
+            <button class="category-btn" data-category="accessories">
+                Accessories
+            </button>
+
+            <button class="category-btn" data-category="electronics">
+                Electronics
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="products-section" id="products">
+
+        <div class="section-heading">
+            <p>DEALZY PICKS</p>
+            <h2>Popular Products</h2>
+        </div>
+
+
+        <div class="products" id="productContainer">
+
+
+            <!-- PRODUCT 1 -->
+            <div class="product-card" data-category="gaming">
+
+                <div class="product-image">
+                    🎧
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Gaming
+                    </span>
+
+                    <h3>
+                        Gaming Headphones
+                    </h3>
+
+                    <p>
+                        Comfortable headphones for gaming,
+                        music and calls.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            Check Price
+                        </span>
+
+                        <a
+                            href="YOUR_AFFILIATE_LINK_HERE"
+                            target="_blank"
+                            rel="nofollow sponsored noopener"
+                            class="deal-btn"
+                        >
+                            View Deal
+                        </a>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <p class="tagline">ENTER YOUR WORLD</p>
 
-            <div class="auth-box">
+            <!-- PRODUCT 2 -->
+            <div class="product-card" data-category="gaming">
 
-                <h2>Welcome Back</h2>
-                <p class="auth-subtitle">Login or create your account</p>
+                <div class="product-image">
+                    🖱️
+                </div>
 
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Email address"
-                    autocomplete="email"
-                >
+                <div class="product-info">
 
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Password"
-                    autocomplete="current-password"
-                >
+                    <span class="product-category">
+                        Gaming
+                    </span>
 
-                <button class="primary-btn" onclick="login()">
-                    Login
-                </button>
+                    <h3>
+                        Gaming Mouse
+                    </h3>
 
-                <button class="secondary-btn" onclick="createAccount()">
-                    Create Account
-                </button>
+                    <p>
+                        Responsive mouse suitable for
+                        gaming and everyday use.
+                    </p>
 
-                <button class="logout-btn" onclick="logout()">
-                    Logout
-                </button>
+                    <div class="product-bottom">
 
-                <p id="authMessage"></p>
+                        <span class="price">
+                            Check Price
+                        </span>
 
-                <div class="user-status">
-                    <span class="status-dot"></span>
-                    <span id="userStatus">Not logged in</span>
+                        <a
+                            href="YOUR_AFFILIATE_LINK_HERE"
+                            target="_blank"
+                            rel="nofollow sponsored noopener"
+                            class="deal-btn"
+                        >
+                            View Deal
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+            <div class="product-card" data-category="electronics">
+
+                <div class="product-image">
+                    ⌨️
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Electronics
+                    </span>
+
+                    <h3>
+                        Mechanical Keyboard
+                    </h3>
+
+                    <p>
+                        A stylish keyboard for gaming,
+                        study and work.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            Check Price
+                        </span>
+
+                        <a
+                            href="YOUR_AFFILIATE_LINK_HERE"
+                            target="_blank"
+                            rel="nofollow sponsored noopener"
+                            class="deal-btn"
+                        >
+                            View Deal
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+            <div class="product-card" data-category="accessories">
+
+                <div class="product-image">
+                    🎮
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Accessories
+                    </span>
+
+                    <h3>
+                        Gaming Controller
+                    </h3>
+
+                    <p>
+                        Easy-to-use controller for
+                        compatible gaming devices.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            Check Price
+                        </span>
+
+                        <a
+                            href="YOUR_AFFILIATE_LINK_HERE"
+                            target="_blank"
+                            rel="nofollow sponsored noopener"
+                            class="deal-btn"
+                        >
+                            View Deal
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+            <div class="product-card" data-category="audio">
+
+                <div class="product-image">
+                    🎵
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Audio
+                    </span>
+
+                    <h3>
+                        Wireless Earbuds
+                    </h3>
+
+                    <p>
+                        Compact earbuds for music,
+                        calls and daily use.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            Check Price
+                        </span>
+
+                        <a
+                            href="YOUR_AFFILIATE_LINK_HERE"
+                            target="_blank"
+                            rel="nofollow sponsored noopener"
+                            class="deal-btn"
+                        >
+                            View Deal
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+            <div class="product-card" data-category="accessories">
+
+                <div class="product-image">
+                    🔌
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Accessories
+                    </span>
+
+                    <h3>
+                        USB-C Hub
+                    </h3>
+
+                    <p>
+                        Useful connectivity accessory
+                        for laptops and PCs.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            Check Price
+                        </span>
+
+                        <a
+                            href="YOUR_AFFILIATE_LINK_HERE"
+                            target="_blank"
+                            rel="nofollow sponsored noopener"
+                            class="deal-btn"
+                        >
+                            View Deal
+                        </a>
+
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </main>
+        <p id="noResults">
+            No products found.
+        </p>
 
-    <script type="module" src="script.js"></script>
+    </section>
+
+
+    <!-- DISCLOSURE -->
+    <section class="disclosure" id="deals">
+
+        <h3>Affiliate Disclosure</h3>
+
+        <p>
+            Dealzy may earn a commission when you purchase through
+            certain links on this website.
+        </p>
+
+        <p>
+            As an Amazon Associate I earn from qualifying purchases.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            Dealzy
+        </div>
+
+        <p>
+            Smart Deals. Better Choices.
+        </p>
+
+        <p class="copyright">
+            © 2026 Dealzy. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
